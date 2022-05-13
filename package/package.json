@@ -1,0 +1,21 @@
+{
+  "name": "@qsyjlib/js-utils",
+  "version": "0.0.1",
+  "description": "",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/js-utils.esm-bundler.js",
+  "scripts": {
+    "dev": "rollup -cw --environment SOURCE_MAP:false",
+    "build": "rollup -c --environment SOURCE_MAP:true"
+  },
+  "buildOptions": {
+    "name": "jsUtils",
+    "formats": [
+      "esm-bundler",
+      "global"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
