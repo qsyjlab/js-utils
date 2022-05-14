@@ -1,20 +1,11 @@
-/*
- * @Description:
- * @Autor: qsyj
- * @Date: 2022-05-12 17:53:57
- * @LastEditors: qsyj
- * @LastEditTime: 2022-05-13 14:44:53
- */
-
 import path from "path";
 import jsonPlugin from "@rollup/plugin-json";
 import resolvePlugin from "@rollup/plugin-node-resolve";
 import typescript2Plugin from "rollup-plugin-typescript2";
 import commonJs from "rollup-plugin-commonjs";
 
-// 压缩 代码 去除 log等
 import { terser } from "rollup-plugin-terser";
-import babel from "@rollup/plugin-babel"; // 转换babel
+import babel from "@rollup/plugin-babel";
 
 const _resolve = (p) => path.resolve(__dirname, p);
 
@@ -37,7 +28,8 @@ const options = pkg.buildOptions;
 function createConfig(format, output) {
   output.name = options.name;
 
-  output.sourcemap = process.env.SOURCE_MAP === "true" ? true : false;
+  output.sourcemap = false;
+  // process.env.SOURCE_MAP === "true" ? true : false;
 
   return {
     input: "./src/index.ts",
@@ -45,20 +37,22 @@ function createConfig(format, output) {
     plugins: [
       jsonPlugin(),
       resolvePlugin(),
-      commonJs(), // 解析第三方模块
-      babel({
-        babelHelpers: "runtime", //
-        exclude: "node_modules/**", // 排除掉node_modules的第三方库
-      }),
-      terser({
-        compress: {
-          pure_funcs: ["console.log"], // 去掉console.log函数
-        },
-      }),
+      commonJs(),
       typescript2Plugin({
+        useTsconfigDeclarationDir:true,
         clean: true,
         cacheRoot: "../node_modules/.cache/rollup-plugin-typescript2",
         tsconfig: _resolve("tsconfig.json"),
+      }),
+      babel({
+        babelHelpers: "runtime",
+        exclude: "node_modules/**",
+      }),
+
+      terser({
+        compress: {
+          pure_funcs: ["console.log"],
+        },
       }),
     ],
   };
