@@ -9,7 +9,8 @@
   "scripts": {
     "play": "pnpm -C play dev",
     "dev": "pnpm -C package dev",
-    "build": "pnpm -C package build"
+    "build": "pnpm -C package build",
+    "docs:dev": "pnpm -C docs docs:dev"
   },
   "author": "",
   "license": "MIT",

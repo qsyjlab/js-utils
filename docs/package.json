@@ -13,5 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "vitepress": "^0.22.4"
+  },
+  "dependencies": {
+    "@qsyjlib/js-utils": "workspace:*",
+    "vue": "^3.2.33"
   }
 }
