@@ -1,14 +1,7 @@
-/*
- * @Description:
- * @Autor: qsyj
- * @Date: 2022-05-13 14:05:29
- * @LastEditors: qsyj
- * @LastEditTime: 2022-05-15 00:56:37
- */
+
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-
   markdown: {
     lineNumbers: true,
   },
@@ -58,6 +51,7 @@ export default defineConfig({
           children: [
             { text: "htmlFileToBase64", link: "/function/htmlFileToBase64/htmlFileToBase64", },
             { text: "htmlFileToBlob", link: "/function/htmlFileToBlob/htmlFileToBlob" },
+            { text:"htmlCompressImage",link:'/function/htmlCompressImage/htmlCompressImage' }
             // { text: "日志", link: "/components/log" },
             // { text: "Button", link: "/components/button/" },
             // { text: "Layout", link: "/components/layout/" },
