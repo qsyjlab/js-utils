@@ -5,7 +5,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
   },
-  title: "js-utils", // 网站标题
+  title: "Js Utils", // 网站标题
   description: "js-utils", //网站描述
   base: "/", //  部署时的路径 默认 /  可以使用二级地址 /base/
   // lang: 'en-US', //语言
@@ -29,37 +29,42 @@ export default defineConfig({
     docsBranch: "main",
     //   头部导航
     nav: [
-      { text: "首页", link: "/guide/" },
-      { text: "函数", link: "/function/" },
+      { text: "Home", link: "/" },
+      { text: "Guide", link: "/guide/getStarted" },
+      { text: "Change Log", link: "/log/changelog" },
     ],
 
     //   侧边导航
     sidebar: {
-      "/function/": [
+      "/functions/": [
+  
         {
           text: "文件流",
           children: [
-            { text: "htmlFileToBase64", link: "/function/htmlFileToBase64/htmlFileToBase64", },
-            { text: "htmlFileToBlob", link: "/function/htmlFileToBlob/htmlFileToBlob" },
-            { text:"htmlCompressImage",link:'/function/htmlCompressImage/htmlCompressImage' },
-            { text:"htmlBase64ToBlob",link:'/function/htmlBase64ToBlob/htmlBase64ToBlob' },
+            { text: "htmlFileToBase64", link: "/functions/htmlFileToBase64/htmlFileToBase64", },
+            { text: "htmlFileToBlob", link: "/functions/htmlFileToBlob/htmlFileToBlob" },
+            { text:"htmlCompressImage",link:'/functions/htmlCompressImage/htmlCompressImage' },
+            { text:"htmlBase64ToBlob",link:'/functions/htmlBase64ToBlob/htmlBase64ToBlob' },
           ],
         },
       ],
-      "/": [
+      "/guide/": [
         {
-          text: "简介",
-          link: "/guide/",
-
+          text: "Guide",
           children: [
-            { text: "开始", link: "/guide/getStart" }
+            { text: "Get Started", link: "/guide/getStarted" }
           ],
         },
         {
-          text: "函数",
-          link: "/function/",
+          text: "Functions",
+          link: "/functions/index",
+        },
+        {
+          text: "Change Log",
+          link: "/log/changelog",
         },
       ],
+      "/":[]
     },
   },
 });

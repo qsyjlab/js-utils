@@ -1,6 +1,6 @@
 {
   "name": "@qsyjlib/js-utils",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "types": "./dist/types/index.d.ts",
   "module": "./dist/js-utils.esm-bundler.js",
