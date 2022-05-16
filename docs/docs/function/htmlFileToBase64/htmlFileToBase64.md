@@ -4,10 +4,17 @@
   文件或 Blob 类型 转换成 base64 字符串
 
 - 参数
-  - file { File | Blob } 文件
+  
+  
+  
+  **Parameters**
+  
+  | 参数名 | 说明 | 类型        | 可选值 | 默认值 |
+  | ------ | ---- | ----------- | ------ | ------ |
+  | file   | 文件 | File / Blob |        |        |
   
 - 返回值
-    
+  
     Promise<string | null>
 
 #### Usage

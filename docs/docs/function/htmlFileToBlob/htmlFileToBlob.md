@@ -4,10 +4,17 @@
   文件 转 Blob
 
 - 参数
-  - file { File } 文件
+  
+  **Parameters**
+  
+  | 参数名 | 说明 | 类型 | 可选值 | 默认值 |
+  | ------ | ---- | ---- | ------ | ------ |
+  | file   | 文件 | File |        |        |
+  
+  
   
 - 返回值
-    
+  
     Promise<string | null>
 
 #### Usage
@@ -36,6 +43,5 @@ export default {
     Demo
   }
 }
-
 
 </script>

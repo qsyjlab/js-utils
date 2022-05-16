@@ -1,14 +1,7 @@
-/*
- * @Description:
- * @Autor: qsyj
- * @Date: 2022-05-13 14:05:29
- * @LastEditors: qsyj
- * @LastEditTime: 2022-05-15 00:56:37
- */
+
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
-
   markdown: {
     lineNumbers: true,
   },
@@ -27,41 +20,29 @@ export default defineConfig({
     //   },
     // ],
   ],
+  
   // 主题配置
   themeConfig: {
-
+  
     repoLabel: "GitHub",
     repo: "qsyjlab/js-utils",
     docsBranch: "main",
-
-    //   repo: 'vuejs/vitepress', // 你的 github 仓库地址，网页的右上角会跳转
     //   头部导航
     nav: [
-      { text: "首页", link: "/" },
+      { text: "首页", link: "/guide/" },
       { text: "函数", link: "/function/" },
-      // { text: '关于', link: '/about/' },
     ],
 
     //   侧边导航
     sidebar: {
-      // "/guide": [
-      //   {
-      //     text: "简介",
-      //     children: [
-      //       { text: "开始", link: "/guide/getStart" },
-      //     ],
-      //   },
-      // ],
       "/function/": [
         {
           text: "文件流",
           children: [
             { text: "htmlFileToBase64", link: "/function/htmlFileToBase64/htmlFileToBase64", },
             { text: "htmlFileToBlob", link: "/function/htmlFileToBlob/htmlFileToBlob" },
-            // { text: "日志", link: "/components/log" },
-            // { text: "Button", link: "/components/button/" },
-            // { text: "Layout", link: "/components/layout/" },
-            // { text: "contextmenu", link: "/components/contextmenu/" },
+            { text:"htmlCompressImage",link:'/function/htmlCompressImage/htmlCompressImage' },
+            { text:"htmlBase64ToBlob",link:'/function/htmlBase64ToBlob/htmlBase64ToBlob' },
           ],
         },
       ],
