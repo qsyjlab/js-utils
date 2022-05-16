@@ -11,13 +11,15 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vitepress";
+import { useRouter ,withBase } from "vitepress";
 
 
-const router =  useRouter()
+
+const router = useRouter();
 
 const getStart = () => {
-    router.go("/guide/getStarted");
+  router.route.path = "/guide/getStarted";
+  router.go(withBase("/guide/getStarted") );
 };
 </script>
 
