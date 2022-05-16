@@ -1,7 +1,7 @@
 <template>
   <div id="home-page">
     <div class="main-title">
-      <h1>Js Utils WebHoots cc test</h1>
+      <h1>Js Utils WebHoots cc </h1>
     </div>
 
     <div class="sub-title">Js utility functions</div>
