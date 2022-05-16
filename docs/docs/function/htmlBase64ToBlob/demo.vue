@@ -15,7 +15,7 @@
 import { ref } from 'vue'
 
 
-import { htmlCompressImage } from "@qsyjlib/js-utils";
+import { htmlFileToBlob } from "@qsyjlib/js-utils";
 
 const result = ref('')
 
@@ -24,7 +24,7 @@ interface InputChangeFile extends Event {
     target:EventTarget & { files : FileList }
 }
 
-// console.log('htmlFileToBlob',htmlFileToBlob);
+console.log('htmlFileToBlob',htmlFileToBlob);
 
 
 
@@ -32,7 +32,7 @@ const changeFile = (e:InputChangeFile) => {
 
     const file = e.target.files[0]
 
-  //  htmlCompressImage(image).then(result=>{})
+    result.value = htmlFileToBlob(file)
   
 };
 </script>
