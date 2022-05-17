@@ -5,7 +5,29 @@
 </template>
 
 <script setup lang="ts">
-import { htmlFileToBase64, htmlCompressImage, htmlFileToBlob} from "@qsyjlib/js-utils";
+import { htmlFileToBase64, htmlCompressImage, htmlFileToBlob, toTypeString } from "@qsyjlib/js-utils";
+
+
+
+
+// console.log('type',toTypeString(new Date()));
+// console.log('type',toTypeString(''));
+// console.log('type',toTypeString(undefined));
+// console.log('type',toTypeString(null));
+
+// console.log('type',toTypeString(Symbol()));
+
+// console.log('typoe',toTypeString(new Map([])) );
+// console.log('typoe',toTypeString(new Set([])) );
+
+// console.log('typoessss', toType(new Set([])).toString() );
+// console.log('toTypeString',toType('').isObject());
+
+
+// console.log('toRawType',isObject(new Date()));
+
+console.log('RegExp', toTypeString(Math.cos) );
+
 
 
 
