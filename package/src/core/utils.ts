@@ -3,5 +3,5 @@ export const toTypeString = (value: unknown): string => Object.prototype.toStrin
 
 export const toRawType = (value: unknown): string => {
   
-  return toTypeString(value).slice(8, -1).toLocaleLowerCase()
+  return toTypeString(value).slice(8, -1)
 }
