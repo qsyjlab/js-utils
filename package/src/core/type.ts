@@ -1,6 +1,15 @@
-import { toTypeString } from "./utils";
 
-export const isObject = (value) => toTypeString(value) === "[object Object]";
+export const toTypeString = (value: unknown): string => Object.prototype.toString.call(value)
+
+export const toRawType = (value: unknown): string => {
+  
+  return toTypeString(value).slice(8, -1)
+}
+export const isObject = (val: unknown): val is Record<any, any> =>
+  val !== null && typeof val === 'object'
+
+
+export const isPlainObject = (value) => toTypeString(value) === "[object Object]";
 export const isArray = (value) => toTypeString(value) === "[object Array]";
 export const isDate = (value) => toTypeString(value) === "[object Date]";
 export const isString = (value) => toTypeString(value) === "[object String]";
